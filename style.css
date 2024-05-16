@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(100deg, #f18b06, #0d7065);
+    padding:10px;
+}
+.todo-app{
+    width:500px;
+    max-width:540px;
+    background:linear-gradient(100deg, rgb(149, 107, 29), #93b55c);
+    margin:100px auto 200px;
+    padding:40px 30px 70px;
+    border-radius:10px;
+}
+.todo-app h2 {
+    color: white; /* Text color */
+    display: flex; /* Display as flex container */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 10px; /* Add some bottom margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Times New Roman', Times, serif; /* Specify font family */
+}
+
+.todo-app h2 img{
+    width:40px;
+    margin-left:10px;
+    height:40px;;
+}
+.row{
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius:40px;
+    padding-left:2px;
+    margin-bottom:25px;
+}
+input{
+    flex:1; 
+    border:none;
+    outline:none;
+    background: whitesmoke;
+    padding:20px;
+    font-weight:15px;
+    border-radius:20px;
+}
+button{
+    position:absolute;
+    left:80.29%;
+    border:none;
+    outline:none;
+    padding:19px 30px;
+    background: rgba(199, 199, 199, 0.626); 
+    color:grey;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:20px;
+}
+button:active{
+    background:rgb(144, 141, 138);
+}
+ul li{
+    list-style:none;
+    font-size:17px;
+    padding:12px 8px 12px 50px;
+    cursor:pointer;
+    user-select:none;
+    position:relative;
+    color:white;
+    text-transform: capitalize;
+}
+ul li::before{
+    content:'';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    background-image:url(images/unchecked.png);
+    background-position:center;
+    top:10px;
+    left:8px;
+    background-size:cover;
+}
+ul li.checked{
+    color:white;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image:url(images/checked.png);   
+}
+ul li span{
+    position:absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color:gold;
+    line-height:40px;
+    text-align:center;
+    border-radius:30%;
+}
+ul li span:hover{
+    background:#516d25;
+
+}
